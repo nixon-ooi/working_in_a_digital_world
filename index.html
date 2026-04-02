@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Work in a Digital World?</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="desktop">
+    
+    <div class="icon-grid">
+        <div class="icon" ondblclick="toggleWindow('visual-research-win', 'Visual_Research.doc')">
+          <img src="images/doc_icon_(2000-03).svg" alt="Word">
+          <p>1.Visual_Research.doc</p>
+        </div>
+
+        <div class="icon" ondblclick="toggleWindow('statement-win', 'Statement_of_intent.doc')">
+          <img src="images/doc_icon_(2000-03).svg" alt="Word">
+          <p>2.Statement_of_intent.doc</p>
+        </div>
+
+        <div class="icon" ondblclick="toggleWindow('geoepistemology-win', 'Geoepistemology (Wiliam Rankin).doc')">
+          <img src="images/doc_icon_(2000-03).svg" alt="Word">
+          <p>3.Geoepistemology (Wiliam Rankin).doc</p>
+        </div>
+        
+        <div class="icon" ondblclick="toggleWindow('are-robots-racist-win', 'Are Robots Racist? (Ruha Benjamin).doc')">
+          <img src="images/doc_icon_(2000-03).svg" alt="Word">
+          <p>4.Are Robots Racist? (Ruha Benjamin).doc</p>
+        </div>
+        
+        <div class="icon" ondblclick="toggleWindow('data-portraits-win', 'Data Portraits (W.E.B. Du Bois).doc')">
+          <img src="images/doc_icon_(2000-03).svg" alt="Word">
+          <p>5.Data Portraits (W.E.B. Du Bois).doc</p>
+        </div>
+
+        <div class="icon" ondblclick="toggleWindow('production-planning-win', 'Production planning.doc')">
+          <img src="images/doc_icon_(2000-03).svg" alt="Word">
+          <p>6.Production Planning.doc</p>
+        </div>
+
+        <div class="icon" ondblclick="toggleWindow('audio-production-win', 'Audio & Visual Production.doc')">
+          <img src="images/doc_icon_(2000-03).svg" alt="Word">
+          <p>7.Audio & Visual Production.doc</p>
+        </div>
+
+
+        <div class="icon" ondblclick="toggleWindow('prototype-production-win', 'Prototype Production.doc')">
+          <img src="images/doc_icon_(2000-03).svg" alt="Word">
+          <p>8.Prototype Production.doc</p>
+        </div>
+        
+        <div class="icon" ondblclick="toggleWindow('review-documents-win', 'Review Documents.doc')">
+          <img src="images/icons8-pdf-80.png" alt="pdf">
+          <p>9.Review Documents.doc</p>
+        </div>
+
+        <div class="icon" ondblclick="toggleWindow('music-win', 'Music_Player')">
+            <img src="images/media_player.png">
+            <p>Music_Player</p>
+            <br>
+        </div>
+
+        <div class="icon recycle-bin" ondblclick="toggleWindow('recycle-win')">
+          <img src="https://img.icons8.com/color/48/000000/recycle-bin.png" alt="Recycle Bin">
+          <p>Recycle Bin</p>
+        </div>
+
+    </div>
+
+    <div id="recycle-win" class="window" style="display:none; top: 30%; left: 40%;">
+        <div class="window-header">
+          <span class="title">Recycle Bin</span>
+          <button class="close-btn" onclick="toggleWindow('recycle-win')">X</button>
+        </div>
+        <div class="window-body folder-view">
+          <p style="color: #666; text-align: center; margin-top: 50px;">The folder is empty.</p>
+        </div>
+    </div>
+
+
+    <div id="visual-research-win" class="window" style="display:none; width: 700px; height: 85vh; top: 5%; left: calc(50% - 350px);"> 
+        <div class="window-header"> 
+            <span class="title">Visual Research.doc - Microsoft Word</span> 
+            <div class="window-controls"> 
+                <button class="min-btn" onclick="minimizeWindow('visual-research-win')">_</button> 
+                <button class="close-btn" onclick="toggleWindow('visual-research-win')">X</button> 
+            </div> 
+        </div> 
+        
+        <div class="window-body" style="height: calc(100% - 52px); padding: 0;"> 
+            <iframe src="visual-research.html" style="width:100%; height:100%; border:none; display: block; "scrolling="yes"></iframe>
+        </div> 
+
+        <div class="window-status-bar"> 
+            <div class="status-left">Page 1 &nbsp;&nbsp; Sec 1 &nbsp;&nbsp; 1/1</div> 
+            <div class="status-right">At 1" &nbsp;&nbsp; Ln 1 &nbsp;&nbsp; Col 1</div> 
+        </div> 
+    </div>
+
+    <div id="statement-win" class="window" style="display:none; width: 700px; height: 85vh; top: 5%; left: calc(50% - 350px);"> 
+        <div class="window-header"> 
+            <span class="title">Statement_of_intent.doc - Microsoft Word</span> 
+            <div class="window-controls">
+                <button class="min-btn" onclick="minimizeWindow('statement-win')">_</button> 
+                <button class="close-btn" onclick="toggleWindow('statement-win')">X</button> 
+            </div> 
+        </div> 
+        
+        <div class="window-body" style="height: calc(100% - 52px); padding: 0;"> 
+            <iframe src="statement.html" style="width:100%; height:100%; border:none; display: block; "scrolling="yes"></iframe>
+        </div> 
+
+        <div class="window-status-bar"> 
+            <div class="status-left">Page 1 &nbsp;&nbsp; Sec 1 &nbsp;&nbsp; 1/1</div> 
+            <div class="status-right">At 1" &nbsp;&nbsp; Ln 1 &nbsp;&nbsp; Col 1</div> 
+        </div> 
+    </div>  
+    
+    <div id="geoepistemology-win" class="window" style="display:none; width: 700px; height: 85vh; top: 5%; left: calc(50% - 350px);"> 
+        <div class="window-header"> 
+            <span class="title">Geoepistemology (Wiliam Rankin).doc - Microsoft Word</span> 
+            <div class="window-controls">
+                <button class="min-btn" onclick="minimizeWindow('geoepistemology-win')">_</button> 
+                <button class="close-btn" onclick="toggleWindow('geoepistemology-win')">X</button> 
+            </div> 
+        </div> 
+        
+        <div class="window-body" style="height: calc(100% - 52px); padding: 0;"> 
+            <iframe src="geoepistemology.html" style="width:100%; height:100%; border:none; display: block; "scrolling="yes"></iframe>
+        </div> 
+
+        <div class="window-status-bar"> 
+            <div class="status-left">Page 1 &nbsp;&nbsp; Sec 1 &nbsp;&nbsp; 1/1</div> 
+            <div class="status-right">At 1" &nbsp;&nbsp; Ln 1 &nbsp;&nbsp; Col 1</div> 
+        </div> 
+    </div>   
+    
+    <div id="are-robots-racist-win" class="window" style="display:none; width: 700px; height: 85vh; top: 5%; left: calc(50% - 350px);"> 
+        <div class="window-header"> 
+            <span class="title">Are Robots Racist? (Ruha Benjamin).doc - Microsoft Word</span> 
+            <div class="window-controls">
+                <button class="min-btn" onclick="minimizeWindow('are-robots-racist-win')">_</button> 
+                <button class="close-btn" onclick="toggleWindow('are-robots-racist-win')">X</button> 
+            </div> 
+        </div> 
+        
+        <div class="window-body" style="height: calc(100% - 52px); padding: 0;"> 
+            <iframe src="are_robots_racist.html" style="width:100%; height:100%; border:none; display: block; "scrolling="yes"></iframe>
+        </div> 
+
+        <div class="window-status-bar"> 
+            <div class="status-left">Page 1 &nbsp;&nbsp; Sec 1 &nbsp;&nbsp; 1/1</div> 
+            <div class="status-right">At 1" &nbsp;&nbsp; Ln 1 &nbsp;&nbsp; Col 1</div> 
+        </div> 
+    </div>   
+
+    <div id="data-portraits-win" class="window" style="display:none; width: 700px; height: 85vh; top: 5%; left: calc(50% - 350px);"> 
+        <div class="window-header"> 
+            <span class="title">Data Portraits (W.E.B. Du Bois).doc - Microsoft Word</span> 
+            <div class="window-controls">
+                <button class="min-btn" onclick="minimizeWindow('data-portraits-win')">_</button> 
+                <button class="close-btn" onclick="toggleWindow('data-portraits-win')">X</button> 
+            </div> 
+        </div> 
+        
+        <div class="window-body" style="height: calc(100% - 52px); padding: 0;"> 
+            <iframe src="data_portraits.html" style="width:100%; height:100%; border:none; display: block; "scrolling="yes"></iframe>
+        </div> 
+
+        <div class="window-status-bar"> 
+            <div class="status-left">Page 1 &nbsp;&nbsp; Sec 1 &nbsp;&nbsp; 1/1</div> 
+            <div class="status-right">At 1" &nbsp;&nbsp; Ln 1 &nbsp;&nbsp; Col 1</div> 
+        </div> 
+    </div>   
+
+    <div id="production-planning-win" class="window" style="display:none; width: 700px; height: 85vh; top: 5%; left: calc(50% - 350px);"> 
+        <div class="window-header"> 
+            <span class="title">Production Planning.doc - Microsoft Word</span> 
+            <div class="window-controls">
+                <button class="min-btn" onclick="minimizeWindow('production-planning-win')">_</button> 
+                <button class="close-btn" onclick="toggleWindow('production-planning-win')">X</button> 
+            </div> 
+        </div> 
+        
+        <div class="window-body" style="height: calc(100% - 52px); padding: 0;"> 
+            <iframe src="production_planning.html" style="width:100%; height:100%; border:none; display: block; "scrolling="yes"></iframe>
+        </div> 
+
+        <div class="window-status-bar"> 
+            <div class="status-left">Page 1 &nbsp;&nbsp; Sec 1 &nbsp;&nbsp; 1/1</div> 
+            <div class="status-right">At 1" &nbsp;&nbsp; Ln 1 &nbsp;&nbsp; Col 1</div> 
+        </div> 
+    </div>   
+
+    <div id="audio-production-win" class="window" style="display:none; width: 700px; height: 85vh; top: 5%; left: calc(50% - 350px);"> 
+        <div class="window-header"> 
+            <span class="title">Audio & Visual Production.doc - Microsoft Word</span> 
+            <div class="window-controls">
+                <button class="min-btn" onclick="minimizeWindow('audio-production-win')">_</button> 
+                <button class="close-btn" onclick="toggleWindow('audio-production-win')">X</button> 
+            </div> 
+        </div> 
+        
+        <div class="window-body" style="height: calc(100% - 52px); padding: 0;"> 
+            <iframe src="audio_visual_production.html" style="width:100%; height:100%; border:none; display: block; "scrolling="yes"></iframe>
+        </div> 
+
+        <div class="window-status-bar"> 
+            <div class="status-left">Page 1 &nbsp;&nbsp; Sec 1 &nbsp;&nbsp; 1/1</div> 
+            <div class="status-right">At 1" &nbsp;&nbsp; Ln 1 &nbsp;&nbsp; Col 1</div> 
+        </div> 
+    </div>   
+
+    <div id="prototype-production-win" class="window" style="display:none; width: 700px; height: 85vh; top: 5%; left: calc(50% - 350px);"> 
+        <div class="window-header"> 
+            <span class="title">Prototype Production.doc - Microsoft Word</span> 
+            <div class="window-controls">
+                <button class="min-btn" onclick="minimizeWindow('prototype-production-win')">_</button> 
+                <button class="close-btn" onclick="toggleWindow('prototype-production-win')">X</button> 
+            </div> 
+        </div> 
+        
+        <div class="window-body" style="height: calc(100% - 52px); padding: 0;"> 
+            <iframe src="prototype_production.html" style="width:100%; height:100%; border:none; display: block; "scrolling="yes"></iframe>
+        </div> 
+
+        <div class="window-status-bar"> 
+            <div class="status-left">Page 1 &nbsp;&nbsp; Sec 1 &nbsp;&nbsp; 1/1</div> 
+            <div class="status-right">At 1" &nbsp;&nbsp; Ln 1 &nbsp;&nbsp; Col 1</div> 
+        </div> 
+    </div>   
+
+    <div id="review-documents-win" class="window" style="display:none; width: 700px; height: 85vh; top: 5%; left: calc(50% - 350px);"> 
+        <div class="window-header"> 
+            <span class="title">Review Documents.doc - Microsoft Word</span> 
+            <div class="window-controls">
+                <button class="min-btn" onclick="minimizeWindow('review-documents-win')">_</button> 
+                <button class="max-btn" onclick="toggleMaximizeWindow('review-documents-win')">□</button>
+                <button class="close-btn" onclick="toggleWindow('review-documents-win')">X</button> 
+            </div> 
+        </div> 
+        
+        <div class="window-body" style="height: calc(100% - 52px); padding: 0;"> 
+            <iframe src="review_documents.html" style="width:100%; height:100%; border:none; display: block; "scrolling="yes"></iframe>
+        </div> 
+
+        <div class="window-status-bar"> 
+            <div class="status-left">Page 1 &nbsp;&nbsp; Sec 1 &nbsp;&nbsp; 1/1</div> 
+            <div class="status-right">At 1" &nbsp;&nbsp; Ln 1 &nbsp;&nbsp; Col 1</div> 
+        </div> 
+    </div>    
+
+    <div id="music-win" class="window" style="display:none; width: 450px; height: 350px; top: 15%; left: 25%;">
+    <div class="window-header">
+        <span class="title">Windows Media Player</span>
+        <div class="window-controls">
+            <button class="min-btn" onclick="minimizeWindow('music-win')">_</button>
+            <button class="close-btn" onclick="toggleWindow('music-win')">X</button>
+        </div>
+    </div>
+
+    <div class="window-body player-bg">
+        <div class="viz-screen">
+            <div class="viz-bars"></div>
+            <p class="song-title"> <strong>Now Playing: Cyndi Lauper</strong><br>(Girls Just Want To Have Fun)</p>
+        </div>
+
+        <div class="player-controls">
+            <audio id="audio-element" src="https://archive.org/download/cyndilaupergirlsjustwanttohavefun_201908/Cyndi_Lauper-Girls_Just_Want_To_Have_Fun.mp3" preload="auto"></audio>
+            <div class="progress-bar-container">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <div class="button-row">
+                <button class="player-btn" onclick="playMusic()">▶</button>
+                <button class="player-btn" onclick="pauseMusic()">■</button>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.1" onchange="changeVolume(this.value)">
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="taskbar">
+        <div class="start-button">
+            <img src="images/windows_xp_logo_by_windows_xp_2001_dicgi0k.png" alt="Start Menu" style="width:20px; margin-right:5px;"/>
+            Start
+        </div>
+
+        <div class="taskbar-apps" id="taskbar-apps">
+        </div>
+
+        <div class="system-tray">
+            <img src="https://img.icons8.com/color/16/000000/clock.png" class="tray-icon" alt="clock-icon">
+            <div id="clock">12:00 PM</div>
+        </div>
+    </div>
+
+  <div id="welcome-modal" class="modal-overlay">
+    <div class="window welcome-box">
+        <div class="window-header">
+            <span class="title">System Message</span>
+            <button class="close-btn" onclick="closeWelcome()">X</button>
+        </div>
+        <div class="window-body modal-content">
+            <div class="modal-layout">
+                <img src="https://img.icons8.com/color/48/000000/info--v1.png" alt="Info">
+                <div class="modal-text">
+                    <p><strong>Welcome to My Blog!</strong></p>
+                    <p>My look at the digital world begins where it all started for me: Windows XP. Dive into the desktop folders to find my blog posts stored as satirical "Word docs." Hope you have as much fun navigating as I did creating this experience XD</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="xp-button" onclick="closeWelcome()">OK</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

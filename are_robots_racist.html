@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* This ensures the 'desk' background fills the whole iframe */
+        /* 1. This stays fixed so the background never "ends" */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* 2. This becomes the actual scrollable area */
+        .desk-wrapper {
+            background-color: #7a7a7a !important; 
+            height: 100%;
+            width: 100%;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px; /* Space above the paper */
+        }
+
+        /* 3. The paper itself */
+        .word-page {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 60px;
+            box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+            margin-bottom: 0px; /* This creates the space at the bottom */
+            flex-shrink: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="desk-wrapper">
+        <div class="word-page"> 
+            <h1 class="doc-title">Are Robots Racist? (Ruha Benjamin)</h1> 
+            <p class="doc-meta">Date: March 2026 | Author: Nixon (23687603)</p> 
+            
+            <hr> 
+
+            <div class="figure-container"> 
+                <img src="images/Are Robots Racist - Extract.png" alt="Author's annotations of Ruha's text." class="doc-image"> 
+                <p class="figure-caption"><i>Figure 1: Author's annotations of Ruha Benjamin's text. (Benjamin R, 2019)</i></p> 
+            </div>             
+
+            <h3>1.0 What, to you, is the most important part of the text? Why?</h3> 
+            <p>"And these defaut settings, once fashioned, take on a life of their own, projecting an allure of objectivity that makes it difficult to hold anyone accountable". It is the most important part because it highlights the issue of accountability in algorithmic decision-making. I see it as a call to action to empower people with the knowledge & motivate people to create a more equitable and just systems.</p>
+
+            <h3>2.0 Find a quote to represent this idea.</h3>
+            <p>???</p>
+            
+            <h3>3.0 Write one sentence to summarise what you have read.</h3> 
+            <p>Humans have biases and so is any technology that they create.</p>
+
+            <hr>
+
+            <div class="figure-container">
+                <div style="position: relative;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rY8RkET3KC0?si=LcFUb7_NbGAEPhou" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="figure-caption"><i>Video 1: Ruha Benjamin discusses 'Race After Technology' (Benjamin R,2020).</i></p>
+            </div>
+
+            <h3>4.0  How is the writing relevant to your own project? How will you work to avoid bias</h3> 
+            <p>In her book "Race After Technology," Ruha Benjamin argues that technology is not an unbiased tool but rather a "New Jim Code" that embeds biases in the name of unbiased data. This argument is relevant to my project on Temporal Colonialism, as it helps me understand how not only the linear calendar is not a culturally unbiased tool but rather a "coded" tool of Western hegemony.
+            <br>
+            <br>    
+            In order to remain unbiased in my project, I need to remain outcome-focused rather than intention-focused, as the intention of using such tools may be efficiency, but the outcome is the complete negation of "Polychronic" cultures. </p>
+
+            <div class="references-section">
+                <hr class="word-divider">
+                <h3>References</h3>
+                <ol class="reference-list">
+                    <li>Benjamin, R. (2019) <em>Race After Technology: Abolitionist Tools for the New Jim Code</em>. Cambridge, UK: Polity, pp. 63–64.</li>
+                    <li>Benjamin, R. (2020) <em>Ruha Benjamin discusses 'Race After Technology' [Video]</em>. Princeton University, 15 May. Available at: https://www.youtube.com/watch?v=rY8RkET3KC0 (Accessed: 1 March 2026).</li>
+                </ol>
+            </div>
+
+
+            <div style="height: 100px;"></div> 
+        </div> 
+    </div>
+</body>
+</html>

@@ -1,0 +1,510 @@
+:root {
+  --xp-blue: linear-gradient(to bottom, #245edb 0%, #3f8cf3 9%, #245edb 18%, #245edb 92%, #333 100%);
+  --xp-border: #0054e3;
+}
+
+body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: 'Tahoma', sans-serif; }
+
+/* Desktop Background */
+.desktop {
+  background: url('images/windows_xp_original-wallpaper.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+/* Icons */
+.icon {
+  width: 100px; /* Slightly wider to give text more room */
+  text-align: center;
+  padding: 10px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  cursor: pointer;
+  word-wrap: break-word; /* Allows long words to break */
+  overflow-wrap: break-word;
+}
+
+.icon p {
+  margin-top: 5px;
+  font-size: 12px;
+  line-height: 1.2;
+  /* Limits the text to 2 lines then adds "..." */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.icon img { width: 68px; }
+
+/* Add this to style.css */
+.icon-grid {
+  display: flex;
+  flex-direction: column; /* Stacks icons vertically */
+  flex-wrap: wrap;        /* Allows icons to start a new column if they hit the bottom */
+  height: calc(100vh - 50px); /* Fill desktop height minus taskbar */
+  width: max-content;
+  padding: 10px;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+/* Windows */
+.window {
+  position: absolute;
+  width: 450px;
+  background: #ece9d8;
+  border: 3px solid #0054e3; /* The signature blue border */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.2); /* Hard shadow for depth */
+  overflow: hidden; /* Keeps the body inside the borders */
+}
+
+.window.maximized {
+  top: 5px !important;
+  left: 5px !important;
+  width: calc(100% - 10px) !important;
+  height: calc(100vh - 60px) !important;
+}
+
+.window-header {
+  background: var(--xp-blue);
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move; /* Or cursor: grab; */
+  user-select: none; /* Prevents text highlighting while dragging */
+}
+
+.window-controls {
+  display: flex;
+  gap: 5px;  
+}
+
+.close-btn {
+  background: #e04343;
+  color: white;
+  border: 1px solid white;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+/* Ensure the window body has NO padding so the gray workspace hits the edges */
+.window-body {
+  padding: 0 !important; /* Forces the removal of that 20px gap */
+  overflow: hidden;
+}
+
+/* Custom Scrollbar for the Content */
+::-webkit-scrollbar {
+    width: 16px;
+}
+::-webkit-scrollbar-track {
+    background: #ece9d8;
+    border: 1px solid #aca899;
+}
+::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #ffffff #808080 #808080 #ffffff;
+}
+
+#about-win {
+  position: absolute;
+  /* We removed top, left, and transform from here */
+  width: 700px; /* Increased width for a better Word feel */
+  z-index: 100;
+}
+
+/* While dragging, we add a class to the window to prevent the iframe from stealing focus */
+.dragging iframe {
+    pointer-events: none;
+}
+
+/* Word Doc Styling */
+.word-doc { background: white; margin: 10px; border: 1px solid #7f9db9; box-shadow: inset 1px 1px 5px rgba(0,0,0,0.1); }
+
+/* Adjusting the word-container to fill the space between header and status bar */
+.word-container {
+  background-color: #7a7a7a;
+  height: calc(100% - 52px); /* Subtracting header and status bar heights */
+  overflow-y: auto;
+}
+
+/* The Status Bar at the bottom */
+.window-status-bar {
+  background: #ece9d8;
+  border-top: 1px solid #aca899;
+  height: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 11px;
+  color: #000;
+}
+
+/* The actual white page */
+.word-page {
+  background: white;
+  width: 100%;
+  max-width: 600px; /* Standard paper width */
+  min-height: 100%;
+  padding: 50px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  font-family: 'Times New Roman', Times, serif; /* Essential for the Word look */
+  color: #000;
+  line-height: 1.5;
+}
+
+.doc-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.doc-meta {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Image and Caption Styling */
+.figure-container {
+  margin: 25px 0;
+  text-align: center;
+  border: 1px inset #eee;
+  padding: 10px;
+}
+
+.doc-image {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000;
+}
+
+.figure-caption {
+  font-size: 13px;
+  margin-top: 8px;
+  color: #333;
+}
+
+/* Add to style.css */
+
+.references-section {
+    margin-top: 40px;
+    font-family: 'Times New Roman', Times, serif; /* Matches Word look */
+}
+
+.word-divider {
+    border: 0;
+    border-top: 1px solid #333;
+    width: 33%; /* Traditional Word footnote/ref divider is short */
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.references-section h3 {
+    font-size: 16px;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.reference-list {
+    font-size: 12px; /* References are typically smaller */
+    padding-left: 25px;
+}
+
+.reference-list li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+    /* The hanging indent look */
+    padding-left: 5px; 
+}
+
+/* Media Player Window */
+.player-bg {
+    background: linear-gradient(to bottom, #757575, #c0c0c0);
+    padding: 10px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.viz-screen {
+    background: #000;
+    height: 180px;
+    border: 2px inset #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.viz-bars {
+    width: 80%;
+    height: 40px;
+    background: repeating-linear-gradient(90deg, #00ff00 0px, #00ff00 4px, transparent 4px, transparent 8px);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; transform: scaleY(1); }
+    50% { opacity: 1; transform: scaleY(1.2); }
+    100% { opacity: 0.5; transform: scaleY(1); }
+}
+
+.player-controls {
+    background: #ece9d8;
+    border: 1px solid #757575;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.player-btn {
+    background: radial-gradient(circle, #4b89ff 0%, #003c74 100%);
+    color: white;
+    border: 1px solid #000;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background: #ffffff;
+    border: 1px inset #808080;
+    margin-bottom: 10px;
+    cursor: pointer; /* Makes it look clickable */
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(to bottom, #28ef28 0%, #0e900e 100%);
+    width: 0%; /* Starts at 0 */
+    transition: width 0.1s linear; /* Makes the movement smooth */
+}
+
+/* Taskbar */
+.taskbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: var(--xp-blue);
+  display: flex;
+  justify-content: space-between; /* This pushes Start to left and Tray to right */
+  align-items: center;
+  z-index: 9999; /* Keeps it above the windows */
+}
+
+.taskbar-apps {
+    flex: 1; /* This makes it take up all the "empty" space in the middle */
+    display: flex;
+    gap: 4px;
+    padding-left: 10px;
+    align-items: center;
+    overflow: hidden; /* Prevent this section from pushing the tray */
+    padding-right: 10px;
+}
+
+.task-button {
+    background: #3c81f3;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 2px;
+    color: white;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    height: 25px; /* Slightly shorter than the taskbar */
+    cursor: pointer;
+    box-shadow: inset -1px -1px 2px rgba(0,0,0,0.5);
+    white-space: nowrap; /* Keeps the text on one line */
+    max-width: 160px; /* Limits how wide a button can grow */
+    min-width: 50px;  /* Ensures it doesn't shrink to nothing */
+    overflow: hidden; /* Hides anything that spills out */
+}
+
+.task-button:hover {
+    background: #5397ff;
+}
+
+.task-button.active {
+    background: #1e52b7 !important; /* A darker, active blue */
+    box-shadow: inset 2px 2px 3px rgba(0,0,0,0.6);
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+.task-button span {
+    white-space: nowrap;      /* Prevents text from wrapping to a second line */
+    overflow: hidden;         /* Hides the extra text */
+    text-overflow: ellipsis;  /* Adds the "..." */
+    font-size: 11px;
+    flex: 1;                  /* Allows text to take up the space next to the icon */
+}
+
+.start-button {
+  background: linear-gradient(to bottom, 
+    #388e3c 0%,    /* Dark green edge */
+    #4caf50 5%,    /* Lighter highlight edge */
+    #81c784 10%,   /* The "Gloss" highlight */
+    #4caf50 25%,   /* Main green */
+    #388e3c 100%   /* Bottom shadow */
+  );
+  color: white;
+  padding: 0 15px;
+  height: 100%;
+  font-style: italic;
+  font-weight: 900; /* Extra bold for that XP feel */
+  font-size: 16px;
+  text-shadow: 1px 1px 1px #2e7d32;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 1px rgba(255,255,255,0.4);
+  transition: filter 0.1s;
+}
+
+.start-button:hover {
+  filter: brightness(1.1); /* Makes it "glow" when hovered */
+}
+
+.start-button:active {
+  filter: brightness(0.9); /* Sinks in when clicked */
+}
+
+.task-button img {
+    width: 14px;
+    height: 14px;
+}
+
+.system-tray {
+  display: flex;
+  align-items: center;
+  /* A darker, "inset" blue gradient */
+  background: linear-gradient(to bottom, 
+    #095bc9 0%, 
+    #0e69e1 10%, 
+    #095bc9 100%
+  );
+  border-left: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 2px 0 3px rgba(0,0,0,0.3);
+  padding: 0 12px;
+  height: 100%;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  flex-shrink: 0;   /* CRITICAL: This tells the tray "Never get smaller or move" */
+  margin-left: auto; /* Ensures it stays pinned to the right */
+}
+
+.tray-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px; /* Space between the icon and the numbers */
+}
+
+/* Dims the desktop when the message appears */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Above everything */
+}
+
+.welcome-box {
+    width: 450px !important;
+    position: relative !important;
+}
+
+.modal-layout {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: #ece9d8;
+}
+
+.modal-text {
+    font-size: 12px;
+    color: #000;
+}
+
+.modal-footer {
+    background: #ece9d8;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+/* The classic XP button style */
+.xp-button {
+    padding: 4px 20px;
+    border: 1px solid #003c74;
+    background: linear-gradient(to bottom, #ffffff 0%, #ebebe4 100%);
+    box-shadow: inset -1px -1px 1px #808080;
+    cursor: pointer;
+}
+
+.xp-button:active {
+    box-shadow: inset 1px 1px 1px #808080;
+}
+
+.song-title {
+    text-align: center;
+}
+
+.min-btn {
+    background: #ebeadb;
+    border: 1px solid #ffffff;
+    border-bottom-color: #707070;
+    border-right-color: #707070;
+    padding: 1px 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+.max-btn {
+    background: #ebeadb;
+    border: 1px solid #ffffff;
+    border-bottom-color: #707070;
+    border-right-color: #707070;
+    padding: 1px 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+.max-btn:active {
+    border: 1px solid #707070;
+    border-bottom-color: #ffffff;
+    border-right-color: #ffffff;
+}
+
+.min-btn:active {
+    border: 1px solid #707070;
+    border-bottom-color: #ffffff;
+    border-right-color: #ffffff;
+}

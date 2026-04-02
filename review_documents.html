@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Review Documents Viewer</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            height: 100%;
+            background: #7a7a7a;
+            color: #111;
+            font-family: 'Tahoma', sans-serif;
+            overflow: auto;
+        }
+
+        .viewer-shell {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            height: 100%;
+        }
+
+        .viewer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 18px;
+            background: #ece9d8;
+            border-bottom: 1px solid #aca899;
+            color: #111;
+        }
+
+        .viewer-title {
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .viewer-info {
+            opacity: 0.75;
+            font-size: 0.94rem;
+            margin-top: 4px;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .window-action {
+            width: 36px;
+            height: 36px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            background: #e4e1d8;
+            border: 1px solid #aca899;
+            color: #111;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .window-action:hover,
+        .window-action:focus {
+            background: #fff;
+            border-color: #8c8c8c;
+            outline: none;
+        }
+
+        .window-action svg {
+            width: 18px;
+            height: 18px;
+            display: block;
+        }
+
+        .viewer-frames {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            background: #7a7a7a;
+        }
+
+        .pdf-embed {
+            width: 100%;
+            min-height: 100%;
+            flex: 1;
+            border: none;
+        }
+
+        .pdf-page {
+            width: 100%;
+            background: #fff;
+            overflow: visible;
+            box-shadow: none;
+        }
+
+        .page-image {
+            width: 100%;
+            display: block;
+            height: auto;
+            border: 1px solid #000;
+            border-radius: 0;
+        }
+
+        .page-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: #f8f7f1;
+            color: #111;
+            font-size: 0.95rem;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-footer .caption {
+            color: #333;
+            font-style: italic;
+        }
+
+        .page-footer .page-number {
+            color: #111;
+            font-weight: 600;
+        }
+
+        .viewer-frames::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .viewer-frames::-webkit-scrollbar-track {
+            background: #7a7a7a;
+        }
+
+        .viewer-frames::-webkit-scrollbar-thumb {
+            background: #aaa;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 760px) {
+            .viewer-header {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .window-controls {
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="viewer-shell">
+        <main class="viewer-frames">
+        <img class="page-image" src="images/Main frame.jpg" alt="Work page 1">
+        <img class="page-image" src="images/Brazil.jpg" alt="Work page 2">
+        <img class="page-image" src="images/Tibet.jpg" alt="Work page 3">
+        <img class="page-image" src="images/Korea.jpg" alt="Work page 4">
+
+        </main>
+    </div>
+
+    <script>
+        const fullscreenButton = document.getElementById('fullscreenBtn');
+
+        function updateButtonText() {
+            if (!fullscreenButton) return;
+            const isFull = document.fullscreenElement != null;
+            const label = isFull ? 'Exit full screen' : 'Enter full screen';
+            fullscreenButton.setAttribute('title', label);
+            fullscreenButton.setAttribute('aria-label', label);
+        }
+
+        if (fullscreenButton) {
+            fullscreenButton.addEventListener('click', async () => {
+                try {
+                    if (!document.fullscreenElement) {
+                        await document.documentElement.requestFullscreen();
+                    } else {
+                        await document.exitFullscreen();
+                    }
+                } catch (err) {
+                    console.warn('Fullscreen request failed:', err);
+                }
+            });
+        }
+
+        document.addEventListener('fullscreenchange', updateButtonText);
+        updateButtonText();
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* This ensures the 'desk' background fills the whole iframe */
+        /* 1. This stays fixed so the background never "ends" */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* 2. This becomes the actual scrollable area */
+        .desk-wrapper {
+            background-color: #7a7a7a !important; 
+            height: 100%;
+            width: 100%;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px; /* Space above the paper */
+        }
+
+        /* 3. The paper itself */
+        .word-page {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 60px;
+            box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+            margin-bottom: 0px; /* This creates the space at the bottom */
+            flex-shrink: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="desk-wrapper">
+        <div class="word-page"> 
+            <h1 class="doc-title">Audio & Visual Production</h1> 
+            <p class="doc-meta">Date: April 2026 | Author: Nixon (23687603)</p> 
+            
+            <hr> 
+
+            <div class="figure-container"> 
+                <img src="images/visual_production.jpg" alt="A 1889 Drink Map of Manchester" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 1: <a href="https://www.freepik.com/free-vector/programmers-computer-using-low-code-platform-computer-tiny-people-low-code-development-low-code-platform-lcdp-easy-coding-concept_11669213.htm#fromView=search&page=1&position=20&uuid=8fd60c39-c3c2-4aa7-8755-c69624600288&query=graphic+design">Image by vectorjuice on Freepik</a></i></p> 
+            </div>             
+
+            <h3>1.0 Audio Production</h3> 
+            <p>The project takes the form of a visual essay presented as a poster series, a form which has been selected as a justified alternative to more conventional forms of vlog or film-based outputs. As a result, there is no audio element in the medium itself. There is no voiceover, no sound design, and no music; rather, the mode is one of purely visual and textual communication. This has been a deliberate choice and one which is in line with the possibility of alternative forms as presented in the brief in terms of justification. My own background in graphic design has been a factor in this decision in terms of the more considered approach which a poster series can take towards the subject matter itself.</p>
+
+            <div class="figure-container"> 
+                <img src="images/research_theory.png" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 2: Compilation of research theory and references</i></p> 
+            </div>       
+
+            <h3>2.0 Visual Production</h3>
+            <p>I started looking towards the overarching study of how different cultures view and experience time. Building on this, Lewis (1996, cited in Culturally Modified, 2020) and Hall (1983, cited in Clockify, 2025) have been referenced for an exploration of how different cultures view time, for example, whether it is linear, cyclical, and procedural, or whether it is monochronic (M-Time) or polychronic (P-Time), whether some cultures view it as moving through them or moving within them (Brainz Magazine, 2023; Clockify, 2025). Further depth was added to this study with Nanni's (2012, p.3) exploration of how the mechanical clock was not simply a tool for keeping time but was in fact a tool for colonial domination, a tool for subjugating indigenous cultures of time and for synchronising labour across all colonies. Coming from the module's perspective of working in the digital world, I explored Ronconi's (2015) study of how European extractive colonization strategies developed strict labour laws with selective enforcement, an imbalance that still impacts today in countries in Latin America, Africa, and beyond.
+
+            <div class="figure-container"> 
+                <img src="images/research_brazil.png" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 3: Visual Reference for Brazil & Poster layout</i></p> 
+            </div>   
+            <div class="figure-container"> 
+                <img src="images/research_tibet.png" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 4: Visual Reference for Tibet & Poster layout</i></p> 
+            </div>   
+            <div class="figure-container"> 
+                <img src="images/research_korea.png" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 5: Visual Reference for Korea & Poster layout</i></p> 
+            </div>
+
+            With the above theoretical background in place, I refined the project scope of the research to the three case studies: Brazil, Tibet, and Korea, exploring each country in the context of colonialism's disruption to the indigenous cultures of time and the processes of Extraction, Centralisation, and Synchronisation respectively. As Nanni (2012, p.5) writes, "temporal artefacts, from sundials to wristwatches, are not the physical manifestations of time itself, but rather the physical manifestations of the time-consciousness of the societies in which they were created." This concept formed the basis of the visual research, which centred on the clock face as the symbolic artefact linking all the works in the series, each designed to incorporate the aesthetic legacy of colonialism in the respective countries: a clock with a Calçada Portuguesa bezel designed for Brazil, a sundial with Sino-Tibetan influences designed for Tibet, and a watch featuring Sangawara tiles designed for Korea.
+            <br>
+            <br>
+            All three posters have been designed using Figma, with the same structure and yet each with its own visual language. The set, titled Imposed Rhythms, is a symbolic visual essay that examines the ways in which, as Nanni (2012, p.1) explains, the attempted eradication and reform of alternative cultures of time, as part of colonialism, set the ideological stage for the highly quantified, clock-disciplined nature of contemporary digital labor.
+            </p>
+
+            <div class="figure-container"> 
+                <img src="images/weavy_brazil.png" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 6: Weavy AI (2026a) - Brazil Clock</i></p> 
+            </div>   
+            <div class="figure-container"> 
+                <img src="images/weavy_tibet.png" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 7: Weavy AI (2026b) - Tibet Sundial</i></p> 
+            </div>   
+            <div class="figure-container"> 
+                <img src="images/weavy_korea.png" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 8: Weavy AI (2026c) - Korea Watch</i></p> 
+            </div>
+
+            <p>I used Weavy AI Bria Text to Vector tool to provide the visual base for each of the posters. The prompt was designed to capture the colonial design heritage of each of the respective countries, with the images being refined and combined using Figma to produce the final designs. 
+            </p>
+            
+            <div class="references-section">
+                <hr class="word-divider">
+                <h3>References</h3>
+                <ol class="reference-list">
+                    <li>Brainz Magazine (2023). <em>How do the different cultures view time management?</em> Available at: https://www.brainzmagazine.com/post/how-do-the-different-cultures-view-time-management (Accessed: 1 April 2026).</li>
+
+                    <li>Clockify (2025). <em>Time orientation and perception of time in different cultures.</em> Available at: https://clockify.me/blog/managing-time/time-perception/ (Accessed: 1 April 2026).</li>
+
+                    <li>Culturally Modified (2020). <em>How different cultures understand time.</em> Available at: https://culturallymodified.org/how-different-cultures-understand-time-best-of/ (Accessed: 1 April 2026).</li>
+
+                    <li>Hall, E.T. (1983). <em>The dance of life: The other dimension of time.</em> New York: Doubleday.</li>
+
+                    <li>Lewis, R.D. (1996). <em>When cultures collide: Managing successfully across cultures.</em> London: Nicholas Brealey Publishing.</li>
+
+                    <li>Nanni, G. (2012). <em>The colonisation of time: Ritual, routine and resistance in the British Empire.</em> Manchester: Manchester University Press.</li>
+
+                    <li>Ronconi, L. (2015). <em>'Colonial history affects labor regulations', World Bank Jobs and Development Blog,</em> 30 November. Available at: https://blogs.worldbank.org/en/jobs/colonial-history-affects-labor-regulations (Accessed: 1 April 2026).</li>
+
+                    <li>Weavy AI (2026a). <em>AI-generated by Bria Text to Vector with prompt 'Front-facing circular wall clock, bold graphic vector illustration, thick clean outlines, clock face with flat solid cobalt blue fill, minimal cardinal numerals 12, 3, 6, 9 in bold sans-serif, small geometric tick marks at each hour position, Calçada Portuguesa mosaic pattern on the outer bezel and frame only — black and white geometric wave and floral stone tile motifs, bold contrasting colours, slim pointed gold hands, mounted front-facing on a warm off-white aged plaster textured wall, wide landscape composition, clock centred as hero, flat 2D vector style, negative space on sides',</em> 25 March. Available at: https://www.weavy.ai (Accessed: 1 April 2026).</li>
+
+                    <li>Weavy AI (2026b). <em>AI-generated by Bria Text to Vector with prompt 'Slight bird's-eye top-down view of a circular sundial, bold graphic vector illustration, thick clean outlines, sundial viewed from slightly above with gentle overhead perspective, flat circular dial face with clean earthy ochre fill, asymmetrically fanned hour lines radiating from centre — lines spaced wider apart at the top and compressed closer together toward the bottom edges replicating authentic sundial hour line geometry, thin vertical pin gnomon at centre casting a single bold flat graphic shadow line across the dial face in deep burnt sienna, large bold Endless Knot — Ashtamangala Buddhist infinite interlacing knot — as central decorative motif rendered in crimson red and ivory integrated between the hour lines, Tibetan script numerals ༡༢ ༣ ༦ ༩ at the four cardinal positions in bold strong serif, eight remaining hour positions marked with small delicate lotus floral pip marks, outer border ring with Sino-Tibetan silk brocade inspired repeating geometric pattern in burnt sienna and ivory, colour palette of earthy ochre, burnt sienna, ivory and deep crimson, transparent white background, sundial centred as hero object, full structure visible no cropping complete object, flat 2D bold vector style, strong clean outlines throughout',</em> 25 March. Available at: https://www.weavy.ai (Accessed: 1 April 2026).</li>
+
+                    <li>Weavy AI (2026c). <em>AI-generated by Bria Text to Vector with prompt 'Front-facing floating product shot of a squircle wristwatch, bold graphic vector illustration, thick strong outlines, squircle watch case body with clean flat structured surfaces referencing Imperial Crown Style Teikan Yoshiki concrete modernist base, bezel as layered tiered crown with sweeping upturned curved eave profiles inspired by traditional Japanese roofline in Teikan Yoshiki style, watch face featuring radial geometric lines emanating from centre on stone grey background, bold Korean numeral characters 십이 삼 육 구 at cardinal outer positions in strong bold serif, minimal hour tick marks, slim pointed bronze watch hands, deep leather strap in slate grey, colour palette of stone grey, deep navy and warm bronze referencing Korean state institutional architecture of the 1960s and 70s, watch dial as clear hero focus, transparent white background, front-facing centred composition, full watch structure visible no cropping complete object, flat bold 2D vector style, high contrast strong outlines',</em> 25 March. Available at: https://www.weavy.ai (Accessed: 1 April 2026).</li>
+                </ol>
+            </div>
+
+
+            <div style="height: 100px;"></div> 
+        </div> 
+    </div>
+</body>
+</html>
