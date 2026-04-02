@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* This ensures the 'desk' background fills the whole iframe */
+        /* 1. This stays fixed so the background never "ends" */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* 2. This becomes the actual scrollable area */
+        .desk-wrapper {
+            background-color: #7a7a7a !important; 
+            height: 100%;
+            width: 100%;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px; /* Space above the paper */
+        }
+
+        /* 3. The paper itself */
+        .word-page {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 60px;
+            box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+            margin-bottom: 0px; /* This creates the space at the bottom */
+            flex-shrink: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="desk-wrapper">
+        <div class="word-page"> 
+            <h1 class="doc-title">Statement of Intent. Exhibition Report</h1> 
+            <p class="doc-meta">Date: January 2026 | Author: Nixon (23687603)</p> 
+            
+            <hr> 
+
+            <h3>1.0 Exhibition Report (IBM)</h3> 
+            <p>In 1911, the Computing-Tabulating-Recording Company (CTR) was established through a merger, spearheaded by Charles Ranlett Flint, to integrate Herman Hollerith’s punch-card technology (IBM, 2026). The machines used electromechanical sensors to automatically "read" punched card holes, thereby facilitating significant innovation in data processing. Its significance cannot be overstated since it established the commercialized field, thereby creating a template for the development of global enterprise software (IBM, 2026). Its effect on work is significant, given that it enabled automation in clerk work, thereby serving to transform labor from bookkeeping to information management, which is evident in IBM's current efforts to leverage AI in creating cognitive systems</p>
+
+            <div class="figure-container"> 
+                <img src="images/exhibition_report_image_overview.jpeg" alt="Timeline of digital advancements" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 1: Timeline of digital advancements (Author, 2026).</i></p> 
+            </div> 
+
+            <h3>2.0 Statement of Intent</h3> 
+            <p>The area I'm interested in is by the legacy of Temporal Colonialism: Westerners and their system of linear time, and the regulation of controlled labor and commerce that results within colonised cultures. The research is delving into the dichotomy of a "standardised" system of work within the digital age that resulted from Temporal Colonialism. The question I would like to explore: "How does the historical legacy of Western linear time, brought and controlled by colonisers, relate to balancing social clocks with modern digital work cultures within former colonies?"</p>
+
+            <div class="references-section">
+                <hr class="word-divider">
+                <h3>References</h3>
+                <ol class="reference-list">
+                    <li>IBM (2026) <em>CTR and the birth of IBM.</em>. Available at: <a href="https://www.ibm.com/history/ctr-and-ibm" target="_blank">https://www.ibm.com/history/ctr-and-ibm</a> (Accessed: 9 February 2026).</li> 
+                </ol>
+                
+            </div>
+
+
+            <div style="height: 100px;"></div> 
+        </div> 
+    </div>
+</body>
+</html>

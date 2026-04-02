@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* This ensures the 'desk' background fills the whole iframe */
+        /* 1. This stays fixed so the background never "ends" */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* 2. This becomes the actual scrollable area */
+        .desk-wrapper {
+            background-color: #7a7a7a !important; 
+            height: 100%;
+            width: 100%;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px; /* Space above the paper */
+        }
+
+        /* 3. The paper itself */
+        .word-page {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 60px;
+            box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+            margin-bottom: 0px; /* This creates the space at the bottom */
+            flex-shrink: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="desk-wrapper">
+        <div class="word-page"> 
+            <h1 class="doc-title">Visual Research</h1> 
+            <p class="doc-meta">Date: January 2026 | Author: Nixon (23687603)</p> 
+            
+            <hr> 
+
+            <h3>1.0 The Moleskine Foundation by Giorgia Lupi</h3> 
+            <p>I analysed the work of Giorgia Lupi, partner at Pentagram and pioneer of "Data Humanism." This project for the Moleskine Foundation is a prime example of a visual essay reconnecting cold numbers to human stories behind them specifically for youth and creators to inspire critical thinking and creative confidence.</p>
+
+            <div class="figure-container"> 
+                <img src="images/02_GL_Moleskine_2021_008.webp" alt="Giorgia Lupi’s hand-stitched Moleskine" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 1: Giorgia Lupi’s hand-stitched Moleskine (Pentagram, 2022).</i></p> 
+            </div> 
+
+            <h3>2.0 Method of Design</h3> 
+            <p>The project works by ditching traditional charts for a much more tactile, stitch-by-hand system of "data embroidery". It's through this narrative stitch for each day in Lupi's life-that the viewer is challenged to rethink data not as an abstract statistic, but as something almost living and breathing.</p>
+
+            <div class="figure-container"> 
+                <img src="images/GL_Moleskine_2021_013.webp" alt="Giorgia Lupi’s hand-stitched Moleskine" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 2: Giorgia Lupi’s hand-stitched Moleskine (Pentagram, 2022).</i></p> 
+            </div>             
+            
+            <h3>3.0 Critique on the Design</h3> 
+            <p>Despite its immense aesthetic beauty, I felt "Book of Life" has the drawback to rely entirely on a legend for interpretation."Context gap" existing without the key, whereby the specific details of a life event might disappear into the stitches, making the project more of a personal meditation than shared record.</p>
+
+            <div class="figure-container"> 
+                <img src="images/GL_Moleskine_2021_023.webp" alt="Giorgia Lupi’s hand-stitched Moleskine" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 3: Giorgia Lupi’s hand-stitched Moleskine (Pentagram, 2022).</i></p> 
+            </div> 
+
+            <h3>4.0 Application for my own work</h3> 
+            <p>The strongest element that I can use from Lupi’s work is her invitation to look inwards. I would like my viewers to be challenged to think beyond consumption and really engage with a critical level of analysis related to their own experiences.</p>
+
+            <div class="references-section">
+                <hr class="word-divider">
+                <h3>References</h3>
+                <ol class="reference-list">
+                    <li>Pentagram (2022) <em>Moleskine Foundation.</em>. Available at: <a href="https://www.pentagram.com/work/moleskine-foundation" target="_blank">https://www.pentagram.com/work/moleskine-foundation</a> (Accessed: 9 February 2026).</li> 
+                </ol>
+                
+            </div>
+
+
+            <div style="height: 100px;"></div> 
+        </div> 
+    </div>
+</body>
+</html>

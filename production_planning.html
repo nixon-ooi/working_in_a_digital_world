@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* This ensures the 'desk' background fills the whole iframe */
+        /* 1. This stays fixed so the background never "ends" */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* 2. This becomes the actual scrollable area */
+        .desk-wrapper {
+            background-color: #7a7a7a !important; 
+            height: 100%;
+            width: 100%;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px; /* Space above the paper */
+        }
+
+        /* 3. The paper itself */
+        .word-page {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 60px;
+            box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+            margin-bottom: 0px; /* This creates the space at the bottom */
+            flex-shrink: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="desk-wrapper">
+        <div class="word-page"> 
+            <h1 class="doc-title">Production planning: workflow and schedules</h1> 
+            <p class="doc-meta">Date: March 2026 | Author: Nixon (23687603)</p> 
+            
+            <hr> 
+
+            <div class="figure-container"> 
+                <img src="images/scheduling.svg" alt="A 1889 Drink Map of Manchester" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 1: <a href="https://www.freepik.com/free-vector/planning-scheduling-flat-composition-with-people-making-cross-marks-calendar-computer-windows-lamp-illustration_16396550.htm#fromView=search&page=1&position=9&uuid=77e9f6bd-01c9-4892-9ad6-16afaeddedce&query=planning">Image by macrovector on Freepik</a></i></p> 
+            </div>             
+
+            <h3>1.0 Project Workflow & Requirements</h3> 
+            <p>I would need the following resources complete the project:</p>
+            <ul>
+                <li><b>Primary Research on colonial effects on:</b> Phillipines, Brazil & India </li>
+                <li><b>Visual Assets:</b> Archival imagery of colonial artifacts and historical documents</li>
+                <li><b>Software:</b> Adobe Illustrator/Figma</li>
+            </ul>
+
+            <h3>2.0 Project Schedule: 3-Week Timeline</h3>
+            <p>This timeline reflects a "Research-through-Design" approach (Stappers and Giaccardi, 2017), where the final poster acts as the culmination of my literary and archival synthesis.</p>
+            <table style="width:100%; border-collapse: collapse; margin-top: 12px;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #999; padding: 6px; text-align: left;">Phase</th>
+                        <th style="border: 1px solid #999; padding: 6px; text-align: left;">Task</th>
+                        <th style="border: 1px solid #999; padding: 6px; text-align: left;">Outcome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #999; padding: 6px;">Week 1: Synthesis</td>
+                        <td style="border: 1px solid #999; padding: 6px;">Research and select 8 specific artifacts for each clock face.</td>
+                        <td style="border: 1px solid #999; padding: 6px;">Draft Annotated Bibliography</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #999; padding: 6px;">Week 2: Layout</td>
+                        <td style="border: 1px solid #999; padding: 6px;">Construct the "Layered Clock" central graphic. Integrate the 12, 3, 6, 9 digital anchors with the hand-drawn colonial artifacts.</td>
+                        <td style="border: 1px solid #999; padding: 6px;">Initial Visual Prototype</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #999; padding: 6px;">Week 3: Refinement</td>
+                        <td style="border: 1px solid #999; padding: 6px;">Refine the "Legend" and "Legend entries." Ensure the critique of "Temporal Colonialism" is clear through the visual hierarchy.</td>
+                        <td style="border: 1px solid #999; padding: 6px;">Peer Review & Legibility Test</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="references-section">
+                <hr class="word-divider">
+                <h3>References</h3>
+                <ol class="reference-list">
+                    <li>Stappers, P.J. and Giaccardi, E. (2017). <em> ‘Research through Design’, in Soegaard, M. and Friis-Dam, R. (eds.) The Encyclopedia of Human-Computer Interaction, 2nd Ed. Aarhus, Denmark: The Interaction Design Foundation.</em> Available at: https://ixdf.org/literature/book/the-encyclopedia-of-human-computer-interaction-2nd-ed/research-through-design (Accessed: 15 March 2026).</li>
+                </ol>
+            </div>
+
+
+            <div style="height: 100px;"></div> 
+        </div> 
+    </div>
+</body>
+</html>

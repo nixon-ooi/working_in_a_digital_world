@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* This ensures the 'desk' background fills the whole iframe */
+        /* 1. This stays fixed so the background never "ends" */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* 2. This becomes the actual scrollable area */
+        .desk-wrapper {
+            background-color: #7a7a7a !important; 
+            height: 100%;
+            width: 100%;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px; /* Space above the paper */
+        }
+
+        /* 3. The paper itself */
+        .word-page {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 60px;
+            box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+            margin-bottom: 0px; /* This creates the space at the bottom */
+            flex-shrink: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="desk-wrapper">
+        <div class="word-page"> 
+            <h1 class="doc-title">Data Portraits (W.E.B. Du Bois)</h1> 
+            <p class="doc-meta">Date: March 2026 | Author: Nixon (23687603)</p> 
+            
+            <hr> 
+
+            <div class="figure-container"> 
+                <img src="images/drink_map_manchester.jpg" alt="A 1889 Drink Map of Manchester" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 1: Drink map of Manchester (University of Manchester, Unknown)</i></p> 
+            </div>             
+
+            <h3>1.0 Who made the work? </h3> 
+            <p>The map was published by the United Kingdom Alliance, a prominent temperance organization, and appeared in the Manchester Guardian on January 5, 1889. It was based on data prepared for the City Magistrates.</p>
+
+            <h3>2.0 What is the purpose?</h3>
+            <p>The purpose was to offer a visual census of the exact extent of the licensed temptations to intemperance that exist in Manchester.By showing the city's magistrates, it is hoped to demonstrate the "density of temptation" and argue in favor of stricter control of liquor licenses.</p>
+            
+            <h3>3.0 What is the main message the author wants to convey?</h3> 
+            <p>The main message here is to give the people the power by means of a direct veto whether a place should be granted a license or no license to protect their community from liquor traffic.</p>
+
+            <h3>4.0  How does it relate to your project? Are there conventions, ideas or themes you can use in your own work? If so, how?</h3> 
+            <p>The concept of the Drink Map is relevant to my project as an exercise in critical cartography, where invisible social forces are visualized as data. Just as the United Kingdom Alliance used the concept of the "density of temptation" to critique urban policy, I shall use the concept of the "density of temporal control" to critique digital design. 
+            <br>
+            <br>    
+            I shall use their convention of geometric symbolism, replacing alcohol markers with colonial artifacts, to classify the friction between Monochronic (M-time) & Polychronic (P-time). Following in the tradition of Du Bois, data portraits shall be used to illustrate how modern-day UI/UX design serves as a vessel for historical colonial hegemony.</p>
+
+            <hr>
+
+            <div class="figure-container"> 
+                <img src="images/du_bois_graph.png" alt="Graph titled: 'Valuation of Town and City Property owned by Georgia Negros'" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 2: Data Portrait of Property Valuation (Du Bois, W.E.B.2018)</i></p> 
+            </div> 
+
+            <h3>5.0 What does the visualisation represent? </h3> 
+            <p>Valuation of property in georgia over a span of 30 years (owned by negros)</p>
+
+            <h3>6.0 What can you tell about the production of the image?</h3>
+            <p>I assume the image was produced using mixed treatment of hand-drawn and printed elements. The lines of the graph appear to be hand-drawn with varying thickness, while the text remind me of a typewriter font.</p>
+            
+            <h3>7.0 Where and how is the graphic representation most effective?</h3> 
+            <p> The spiral form allows decades of data to fit neatly into one image without feeling cluttered. Rather than a standard bar chart, the steep shaded line graph along with strategically placed labels provides depth and understanding of the data build up over time. It prioritises impact over precision, making the increase in property value immediately striking and emotionally readable at a glance.</p>
+
+            <div class="references-section">
+                <hr class="word-divider">
+                <h3>References</h3>
+                <ol class="reference-list">
+                    <li>Battle-Baptiste, W. and Rusert, B. (eds.) (2018) <em>W. E. B. Du Bois’s Data Portraits: Visualizing Black America</em>. Princeton: Princeton Architectural Press.</li>
+                    <li>University of Manchester (1889) <em>Drink Map of Manchester</em> (C17:70 Manchester (3)). Available at: https://www.digitalcollections.manchester.ac.uk/view/PR-C-00017-00070-MANCHESTER-00003/1 (Accessed: 14 March 2026).</li>
+                </ol>
+            </div>
+
+
+            <div style="height: 100px;"></div> 
+        </div> 
+    </div>
+</body>
+</html>

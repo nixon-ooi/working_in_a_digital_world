@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        /* This ensures the 'desk' background fills the whole iframe */
+        /* 1. This stays fixed so the background never "ends" */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* 2. This becomes the actual scrollable area */
+        .desk-wrapper {
+            background-color: #7a7a7a !important; 
+            height: 100%;
+            width: 100%;
+            overflow-y: auto; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0px; /* Space above the paper */
+        }
+
+        /* 3. The paper itself */
+        .word-page {
+            background: white;
+            width: 90%;
+            max-width: 600px;
+            padding: 60px;
+            box-shadow: 6px 6px 15px rgba(0,0,0,0.4);
+            margin-bottom: 0px; /* This creates the space at the bottom */
+            flex-shrink: 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="desk-wrapper">
+        <div class="word-page"> 
+            <h1 class="doc-title">Prototype Production</h1> 
+            <p class="doc-meta">Date: April 2026 | Author: Nixon (23687603)</p> 
+            
+            <hr> 
+
+            <div class="figure-container"> 
+                <img src="images/layout_sketch.jpeg" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 1: Initial layout sketches</i></p> 
+            </div>               
+
+            <h3>1.0 Prototype Production</h3> 
+            <p>The prototyping phase commenced with a fundamental planning phase, where the essential aspects to be included within each piece were determined as a title, content description, and imagery. This phase was then explored through pen and paper sketches on a notepad, which is a recognized method for undertaking low-fidelity prototyping in the early stages of the design phase for quickly dismissing layout considerations before embarking on a digital approach (Interaction Design Foundation, 2026). It became apparent early on in the prototyping phase that a portrait layout would not afford sufficient space to accommodate all three elements within a cohesive format and therefore resulted in the adoption of a landscape layout.
+
+            <div class="figure-container"> 
+                <img src="images/figma_layout.png" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 2: Figma initial layout</i></p> 
+            </div>   
+
+            Initial exploration was done digitally in Figma, where the collected assets such as the created AI-generated timepieces, the series title Imposed Rhythms, and drafted written content were brought together to test the configurations. Still, the limitations of the poster format continued to be an issue in terms of the spatial limitations for the amount of content the project was intended to convey. This was a big turning point in the thought process behind the work. Rather than seeing the work as individual posters, the format was reimagined as a scrollable website flow.
+
+            <div class="figure-container"> 
+                <img src="images/label_guide.png" alt="research board" class="doc-image"> 
+                <p class="figure-caption"><i>Figure 3: Exhibit label guide (Serrell and Whitney, 2024)</i></p> 
+            </div>   
+
+            With the layout now in place, attention was turned to refining both artefact and text. The format for museum display was utilised as an inspiration for the text format, with each timepiece presented with title, date, location, and description, as informed by best practice for writing interpretive labels for exhibits (Serrell and Whitney, 2024). The hard facts component was then introduced to each piece to contextualise the visual component within a historically informed framework, followed by a country-specific conclusion as a call to action. For Tibet, this was presented as a provocation linking centralisation and its relationship to modern digital systems, with the question posed as to Whose frequency are we tuned into today? The final prototype was then exported as a PDF.
+            </p>
+            
+            <div class="references-section">
+                <hr class="word-divider">
+                <h3>References</h3>
+                <ol class="reference-list">
+                    <li>Interaction Design Foundation (2026). <em>What are low-fidelity prototypes?</em> Available at: https://ixdf.org/literature/topics/low-fidelity-prototypes (Accessed: 1 April 2026).</li>
+
+                    <li>Serrell, B. and Whitney, K. (2024). <em>Exhibit labels: An interpretive approach.</em> 3rd edn. Lanham: Rowman & Littlefield.</li>
+                </ol>
+            </div>
+
+
+            <div style="height: 100px;"></div> 
+        </div> 
+    </div>
+</body>
+</html>
