@@ -13,6 +13,12 @@ function toggleWindow(id, title) {
 
     if (win.style.display === "none" || win.style.display === "") {
         win.style.display = "block";
+        
+        // Re-apply maximized state for final-documents-win every time it opens
+        if (id === 'final-documents-win') {
+            win.classList.add('maximized');
+        }
+        
         document.querySelectorAll('.window').forEach(w => w.style.zIndex = "100");
         win.style.zIndex = "1000";
 
@@ -181,6 +187,14 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
             controls.appendChild(maxBtn);
         }
+    });
+
+    // Initialize dataset for windows that start maximized
+    document.querySelectorAll('.window.maximized').forEach(win => {
+        win.dataset.originalLeft = win.style.left || '';
+        win.dataset.originalTop = win.style.top || '';
+        win.dataset.originalWidth = win.style.width || '';
+        win.dataset.originalHeight = win.style.height || '';
     });
 
     // Setup Draggable Windows
