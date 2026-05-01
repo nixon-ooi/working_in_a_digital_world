@@ -191,9 +191,8 @@ window.addEventListener('DOMContentLoaded', () => {
     makeDraggable('data-portraits-win');
     makeDraggable('production-planning-win');
     makeDraggable('audio-production-win');
-    makeDraggable('visual-production-win');
     makeDraggable('prototype-production-win');
-    makeDraggable('review-documents-win');
+    makeDraggable('final-documents-win');
     makeDraggable('music-win');    
 
     // Setup Music Progress Bar
